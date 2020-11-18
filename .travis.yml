@@ -3,7 +3,7 @@ services:
   - docker
 
 before install:
-  - docker build -t awscpukiller/react-test -f ./cliet/Dockerfile.dev ./client
+  - docker build -t awscpukiller/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run awscpukiller/react-test npm test --  --coverage
